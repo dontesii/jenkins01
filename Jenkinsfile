@@ -2,3 +2,4 @@ pipeline { agent any parameters { string(name: 'STATEMENT', defaultValue: 'hello
 stages { stage('Example') 
 { steps { /* CORRECT */ sh('echo ${STATEMENT}') } } } }
 
+1
