@@ -6,7 +6,7 @@ node {
       }     
       stage ('Создать образ') {          
        
-            app = docker.build ("dontesi/admon test")     
+            app = docker.build ("dontesi/admon")     
        }     
       stage ('Test image') {           
             app.inside {             
