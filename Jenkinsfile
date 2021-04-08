@@ -8,12 +8,12 @@ pipeline {
     }
     stage('Two step') {
       steps {
-        sh 'mysql -u root -p1Montecarlo1! -e \'SELECT * FROM tourneys;\' days > /home/ubuntu/workspace/BackBase/test.txt'
+        sh 'mysql -u root -p1Montecarlo1! -e \'SELECT * FROM tourneys;\' Users > /home/ubuntu/workspace/job3.1/test.txt'
       }
     }
     stage('Dump step') {
       steps {
-        sh 'mysqldump -u root -p1Montecarlo1! days > /home/ubuntu/workspace/BackBase/dump.sql'
+        sh 'mysqldump -u root -p1Montecarlo1! Users > /home/ubuntu/workspace/job3.1/dump.sql'
       }
     }
 
