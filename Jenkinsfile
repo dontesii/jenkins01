@@ -1,7 +1,6 @@
 node {     
       def 
-
-      {                
+                    
              
             checkout scm     
       }     
