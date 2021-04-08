@@ -1,10 +1,11 @@
 node {     
       def 
-          {                
+      этап приложения      ('Клонировать репозиторий') 
+      {                
              
             checkout scm     
       }     
-      stage ('Создать образ') {          
+      stage ('Создать образ') {       
        
             app = docker.build ("dontesi/admon")     
        }     
