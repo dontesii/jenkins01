@@ -1,14 +1,2 @@
-RUN curl -fsSLO https://get.docker.com/builds/Linux/x86_64/docker-17.04.0-ce.tgz \
-  && tar xzvf docker-17.04.0-ce.tgz \
-  && mv docker/docker /usr/local/bin \
-  && rm -r docker docker-17.04.0-ce.tgz
-
-
-FROM node:latest as node
-RUN mkdir -p /app
-WORKDIR /app
-COPY package*.json /app/
-RUN npm install 
-COPY . /app/
-EXPOSE 4200
-CMD ["npm", "run", "start"]
+FROM ubuntu:20.04
+RUN apt update && apt upgrade -y
