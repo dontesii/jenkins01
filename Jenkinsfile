@@ -47,7 +47,7 @@ pipeline {
                         try {
                             //sh "terraform workspace new ${params.WORKSPACE}"
                         } catch (err) {
-                            //sh "terraform workspace select ${params.WORKSPACE}"
+                            sh "terraform workspace select ${params.WORKSPACE}"
                         }
                         sh "terraform plan -var 'access_key=$AWS_ACCESS_KEY_ID' -var 'secret_key=$AWS_SECRET_ACCESS_KEY' \
                         -var-file 'terraform.tfvars' -out terraform.tfplan;echo \$? > status"
