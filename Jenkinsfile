@@ -45,7 +45,7 @@ pipeline {
                 dir('ec2_pipeline/'){
                     script {
                         try {
-                            sh "terraform workspace new ${params.WORKSPACE}"
+                            //sh "terraform workspace new ${params.WORKSPACE}"
                         } catch (err) {
                             sh "terraform workspace select ${params.WORKSPACE}"
                         }
